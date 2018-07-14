@@ -1,0 +1,89 @@
+body{
+    background-color: #ecf0f1;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.ball{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    transform-origin: center;
+}
+
+#ball1{
+    animation: bounceBallsToRight 1s;
+    background-color: #ff6b81;
+    border-radius: 50%;
+    opacity: 0;
+}
+#ball2{
+    top: -30px;
+    left: -60px;
+    transform: scale(2);
+    animation: bounceBalls 1.5s;
+    background-color: #ff6b81;
+    border-radius: 100%;
+}
+#ball3{
+    animation: bounceBallsToLeft 1s;
+    border-radius: 50%;
+    background-color: #ff6b81;
+    opacity: 0;
+}
+@keyframes bounceBalls{
+    0%{
+        top: 0px;
+        left: -60px;
+        transform: scale(1);
+    }
+    75%{
+        top: -30px;
+        left: -60px;
+        transform: scale(2);
+    }
+    80%{
+        border-radius: 50%;
+    }
+    100%{
+        border-radius: 100%;
+    }
+    
+}
+
+@keyframes bounceBallsToRight{
+    0%{
+        top: 0px;
+        left: -120px;
+        opacity: 1;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        top: -40px;
+        left: -60px;
+        opacity: 0;
+    }
+    
+}
+
+@keyframes bounceBallsToLeft{
+    0%{
+        top: 0px;
+        left: 0px;
+        opacity: 1;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        top: -40px;
+        left: -60px;
+        opacity: 0;
+    }
+   
+}

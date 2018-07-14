@@ -1,0 +1,53 @@
+body{
+    background-color: #1d1d1d;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.ball{
+    position: absolute;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    opacity: 1;
+}
+
+#ball1{
+    animation: rippleEffect 1s ;
+}
+#ball2{
+    animation: rippleEffect 1s 0.5s ;
+}
+#ball3{
+    animation: rippleEffect 1s 1s ;
+}
+#ball4{
+    animation: rippleEffect 1s 1.5s ;
+}
+#ball5{
+    animation: rippleEffect 1s 2s ;
+}
+
+@keyframes rippleEffect {
+    0%{
+        filter: blur(0px);
+        transform: scale(1);
+        opacity: 1;
+        border: 2px solid rgba(255, 255, 255, 1);
+    }
+    70%{
+        filter: blur(0.5px);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+
+    }
+    100%{
+        filter: blur(5px); 
+        transform: scale(5);
+        opacity: 0;
+        border: 4px solid rgba(255, 255, 255, 0);
+    }
+}
