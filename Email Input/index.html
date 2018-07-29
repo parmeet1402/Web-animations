@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="style.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            
+            <button class = "btn">Notify Me!</button>
+            <script>
+                function ab(){
+                    btn.classList.remove('btn1');
+                    btn.classList.add('btn5');
+                    btn.innerHTML = `<input class="animateDown" placeholder="E-mail" spellcheck="false" autocomplete="off" size=14 type="email" id="email">
+                    <input type="button" class="animateDown" onclick="ab()" value="Send">
+                    <label id="tyu">Thank you!</label>`;  
+                }
+                let btn = document.querySelector('.btn');
+                btn.addEventListener('click', function(event){
+                    btn.innerHTML = " ";
+                    btn.classList.remove('btn');
+                    btn.classList.add('btn1');
+                    console.log(btn);
+                    setTimeout(function(){
+                       btn.innerHTML = `<input autofocus placeholder="E-mail" spellcheck="false" autocomplete="off" size=14 type="email" id="email">
+                    <input type="button" onclick="ab()" class="btn4" value="Send">`;  
+                    },500);
+                },{once: true});
+            </script>
+        </div>
+    </body>
+</html>
