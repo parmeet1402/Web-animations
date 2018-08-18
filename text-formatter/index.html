@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <link href="./style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    </head>
+    <body>
+        <div id="box1" class="clearfix">
+            <div class="container1">
+                <h1>
+                    Text Formatter
+                </h1>
+            </div>
+            <div>   
+
+                <div id="color_view"></div>
+                
+                #<input type="text" id="color_picker" placeholder="ff0000" value="ff0000" size=6 maxlength="6">
+            </div>
+            <div class="divs">
+                Font Size
+                <input type="text" id="text_size" placeholder="24" value="40" size=3 maxlength="2">
+            </div>
+                <div class="divs">
+                Bold
+                <label class="switch">
+                    <input type="checkbox" id="bold_btn">
+                    <span class = "slider round"></span>
+                </label>  
+            </div>
+            
+            <div class="divs">
+                Italic
+                <label class="switch">
+                    <input type="checkbox" id="italic_btn">
+                    <span class = "slider round"></span>
+                </label>  
+            </div>
+
+            <div class="divs">
+                Underline
+                <label class="switch">
+                    <input type="checkbox" id="underline_btn">
+                    <span class = "slider round"></span>
+                </label>  
+            </div>
+            
+        </div>
+        <div id="box2" class="clearfix">
+            <div class="container">
+                <input type="text" id="text_input" placeholder="Input text here" value="Input text here">
+            </div>
+        </div>
+        
+    <script src="script.js"></script>
+    </body>
+</html>
